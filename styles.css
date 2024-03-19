@@ -1,1 +1,18 @@
 /*  your css code here. If applicable */
+body{
+	background-color: blueviolet;
+}
+
+.buttonContainer{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn{
+	background-color: purple;
+	color: white;
+	padding: 7px 10px;
+	cursor: pointer;
+}

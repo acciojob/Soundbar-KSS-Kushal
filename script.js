@@ -1,4 +1,5 @@
-let sounds = []; // Array to hold all Audio objects
+let sounds; // Array to hold all Audio objects
+const audioHTML = document.getElementById('myaudio');
 
 const btnList = document.querySelectorAll('.btn');
 for (let i = 0; i < btnList.length; i++) {
@@ -13,15 +14,15 @@ for (let i = 0; i < btnList.length; i++) {
 
 function playSound(i){
     let soundName = btnList[i].textContent;
-    let audio = new Audio(`sounds/${soundName}.mp3`);
-    sounds.push(audio); // Add the Audio object to the sounds array
+    let audio = audioHTML.setAttribute("src",`sounds/${soundName}.mp3`);
+    sounds = audio // Add the Audio object to the sounds array
     audio.play();
 }
 
 function stopSounds() {
     // Loop through the sounds array and stop each sound
     for (let i = 0; i < sounds.length; i++) {
-        sounds[i].pause();
-        sounds[i].currentTime = 0; // This line sets the sound time back to 0
+        sounds.pause();
+        sounds.currentTime = 0; // This line sets the sound time back to 0
     }
 }

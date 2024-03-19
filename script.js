@@ -14,9 +14,9 @@ for (let i = 0; i < btnList.length; i++) {
 
 function playSound(i){
     let soundName = btnList[i].textContent;
-    let audio = audioHTML.setAttribute("src",`sounds/${soundName}.mp3`);
-    sounds = audio // Add the Audio object to the sounds array
-    audio.play();
+    audioHTML.setAttribute("src",`sounds/${soundName}.mp3`);
+    sounds = audioHTML // Add the Audio object to the sounds array
+    audioHTML.play();
 }
 
 function stopSounds() {
